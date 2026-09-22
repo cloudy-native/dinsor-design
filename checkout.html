@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout — Linden</title>
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="inner site-header">
+  <a class="wordmark" href="shop.html">Linden</a>
+  <nav aria-label="Shop">
+    <a href="shop.html">Shop</a>
+    <a href="cart.html">Cart</a>
+    <a href="story.html">Notes</a>
+  </nav>
+</header>
+<main id="content" class="inner">
+  <div class="section-head">
+    <p class="overline">Checkout</p>
+    <h1>Where to send it.</h1>
+    <p class="lede">Ships in two days. The carrier is the postal service.</p>
+  </div>
+  <div class="split">
+    <form class="stack" action="order.html">
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" value="Ada Cole">
+      </div>
+      <div class="field">
+        <label for="street">Street</label>
+        <input id="street" name="street" type="text" autocomplete="address-line1" value="18 Reed Street">
+      </div>
+      <div class="field">
+        <label for="city">City</label>
+        <input id="city" name="city" type="text" autocomplete="address-level2" value="Portland">
+      </div>
+      <div class="field">
+        <label for="zip">ZIP</label>
+        <input id="zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" value="97214">
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" value="ada@example.com">
+      </div>
+      <button class="btn primary" type="submit">Place order</button>
+    </form>
+    <article class="card summary">
+      <h2>In this order</h2>
+      <ul class="totals">
+        <li><span>Mixing bowl</span><span>$68</span></li>
+        <li><span>Linen napkins</span><span>$42</span></li>
+        <li><span>Shipping</span><span>$18</span></li>
+      </ul>
+      <p class="metric">$128</p>
+      <p class="caption">Total</p>
+    </article>
+  </div>
+</main>
+<footer class="inner site-footer">
+  <p class="caption">Linden. Household objects, made in small runs.</p>
+</footer>
+</body>
+</html>
