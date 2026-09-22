@@ -214,7 +214,9 @@ p { margin: 0; }
 
 .media {
   display: block;
+  width: 100%;
   aspect-ratio: 4 / 5;
+  object-fit: cover;
   border-radius: var(--radius-control);
 }
 
@@ -232,7 +234,10 @@ p { margin: 0; }
 }
 
 .stage {
+  display: block;
+  width: 100%;
   aspect-ratio: 1 / 1;
+  object-fit: cover;
   border-radius: var(--radius-card);
 }
 
@@ -335,6 +340,7 @@ input {
   width: 64px;
   height: 64px;
   flex: none;
+  object-fit: cover;
   border-radius: var(--radius-control);
 }
 
