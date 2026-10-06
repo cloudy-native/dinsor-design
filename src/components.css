@@ -204,8 +204,6 @@ code {
   background: var(--surface);
 }
 
-.card > * + * { margin-top: var(--space-16); }
-
 /* Menu: the only component with a shadow */
 .menu {
   display: inline-flex;
