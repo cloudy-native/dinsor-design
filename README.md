@@ -43,4 +43,4 @@ Edit `tokens/tokens.json` or `src/*.css`, run `npm run build`, commit `dist/`. C
 
 ## License
 
-[Unlicense](LICENSE): public domain. The font files in [fonts/](fonts/) keep their own SIL OFL 1.1 license.
+[MIT](LICENSE). The font files in [fonts/](fonts/) keep their own SIL OFL 1.1 license.
