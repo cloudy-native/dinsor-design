@@ -18,7 +18,7 @@ Five jewel-tone accents: `<html data-theme="garnet">`. See [dist/tokens.md](dist
 
 ## For coding agents
 
-Start at [AGENTS.md](AGENTS.md). Then copy markup from [components/](components/) or start from [templates/page.html](templates/page.html). Check output with `node scripts/lint.mjs <files>`.
+Start at [AGENTS.md](AGENTS.md). Then copy markup from [components/](components/) or start from [templates/page.html](templates/page.html). Check output with `bun scripts/lint.mjs <files>`.
 
 ## Layout
 
@@ -39,7 +39,7 @@ Start at [AGENTS.md](AGENTS.md). Then copy markup from [components/](components/
 
 ## Change it
 
-Edit `tokens/tokens.json` or `src/*.css`, run `npm run build`, commit `dist/`. CI runs `npm run check`.
+Edit `tokens/tokens.json` or `src/*.css`, run `bun run build`, commit `dist/`. CI runs `bun run check`.
 
 ## License
 

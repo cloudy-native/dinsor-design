@@ -35,13 +35,13 @@ Start from [templates/page.html](templates/page.html). Copy markup from [compone
 ## Check your work
 
 ```
-node scripts/lint.mjs path/to/your/files
+bun scripts/lint.mjs path/to/your/files
 ```
 
 Fails on off-token color, font size, weight, radius, spacing or shadow, gradients, unknown classes, missing `alt`/`lang`. Fix every line it prints.
 
 ## Change the system
 
-Edit `tokens/tokens.json` or `src/*.css`, then `npm run build`. Never edit `dist/` by hand. CI fails if `dist/` is stale.
+Edit `tokens/tokens.json` or `src/*.css`, then `bun run build`. Never edit `dist/` by hand. CI fails if `dist/` is stale.
 
 `examples/` are demos built on the system. They are not part of it. Do not copy their classes.
