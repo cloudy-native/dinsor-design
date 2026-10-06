@@ -8,6 +8,7 @@ Demos built on `dist/dinsor.css`. They show the system in use. Nothing here is p
 | [blog/](blog/index.html) | Post list, long-form article with pull quote and code |
 | [saas/](saas/index.html) | Product landing page, pricing and FAQ |
 | [docs/](docs/index.html) | Sidebar nav, code blocks, table, callout |
+| [components/](components/index.html) | One-page catalog: every token, size and component |
 | [portfolio/](portfolio/index.html) | Intro, work list with tags, about, contact |
 
 Each page has a theme switcher (`theme-switch.js`, demo only) that sets `data-theme`.

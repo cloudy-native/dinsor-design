@@ -157,7 +157,8 @@ label {
 }
 
 input,
-select {
+select,
+textarea {
   width: 100%;
   min-height: var(--layout-hit-target);
   padding: var(--space-12) var(--space-16);
@@ -205,7 +206,157 @@ code {
   background: var(--surface);
 }
 
-/* Menu: the only component with a shadow */
+/* Textarea, checkbox, radio */
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: 20px;
+  min-height: 20px;
+  padding: 0;
+  flex: none;
+  accent-color: var(--accent);
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  min-height: var(--layout-hit-target);
+  font-size: var(--text-body);
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.6;
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled { opacity: 0.4; cursor: default; }
+
+.hint {
+  font-size: var(--text-caption);
+  line-height: 1.45;
+  color: var(--olive);
+}
+
+/* Notice: inline message. Default is quiet green; .error is for failures. */
+.notice {
+  padding: var(--space-16) var(--space-24);
+  border-radius: var(--radius-card);
+  background: var(--tag-quiet);
+  color: var(--ink);
+}
+
+.notice.danger {
+  border: 1px solid var(--danger);
+  background: var(--surface);
+}
+
+.notice-title { font-weight: 500; }
+.notice.danger .notice-title { color: var(--danger); }
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-caption);
+  line-height: 1.45;
+}
+
+.table th {
+  text-align: left;
+  font-weight: 500;
+  color: var(--olive);
+}
+
+.table th,
+.table td {
+  padding: var(--space-12) var(--space-16) var(--space-12) 0;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.table .num { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Breadcrumb */
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4) var(--space-8);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-caption);
+  line-height: 1.45;
+}
+
+.crumbs li + li::before {
+  content: "/";
+  margin-right: var(--space-8);
+  color: var(--stone);
+}
+
+.crumbs [aria-current="page"] { color: var(--olive); text-decoration: none; }
+
+/* Pagination */
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.pagination .btn[aria-current="page"] { border-color: var(--ink); }
+
+/* Accordion: native <details> */
+.accordion details + details { border-top: 1px solid var(--line); }
+
+.accordion summary {
+  display: flex;
+  align-items: center;
+  min-height: var(--layout-hit-target);
+  cursor: pointer;
+}
+
+.accordion summary::after { content: "+"; margin-left: auto; color: var(--olive); }
+.accordion details[open] summary::after { content: "\2212"; }
+
+.accordion details > :not(summary) { padding-bottom: var(--space-16); max-width: var(--layout-measure); }
+
+/* Progress */
+progress {
+  display: block;
+  width: 100%;
+  height: var(--space-8);
+  border: 0;
+  border-radius: var(--radius-chip);
+  background: var(--sand);
+  appearance: none;
+  accent-color: var(--accent);
+}
+
+progress::-webkit-progress-bar { border-radius: var(--radius-chip); background: var(--sand); }
+progress::-webkit-progress-value { border-radius: var(--radius-chip); background: var(--accent); }
+progress::-moz-progress-bar { border-radius: var(--radius-chip); background: var(--accent); }
+
+/* Dialog: a floating layer, so it takes the shadow */
+dialog {
+  width: min(480px, calc(100% - var(--space-32)));
+  padding: var(--space-24);
+  border: 0;
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow-floating);
+}
+
+dialog > * + * { margin-top: var(--space-16); }
+
+dialog::backdrop { background: var(--ink); opacity: 0.4; }
+
+/* Menu: a floating layer, so it takes the shadow */
 .menu {
   display: inline-flex;
   flex-direction: column;
