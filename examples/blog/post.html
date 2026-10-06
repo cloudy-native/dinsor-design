@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The case for boring typography — Field Notes</title>
+<link rel="stylesheet" href="../../dist/dinsor.css">
+<link rel="stylesheet" href="blog.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="inner site-header">
+  <a class="wordmark" href="index.html">Field Notes</a>
+  <nav aria-label="Primary">
+    <a href="index.html">Notes</a>
+    <a href="post.html" aria-current="page">Latest</a>
+  </nav>
+</header>
+<main id="content" class="inner">
+  <article class="article">
+    <p class="overline">Typography</p>
+    <h1 class="display">The case for boring typography</h1>
+    <p class="meta">12 September · 6 min</p>
+    <p class="lede">Two typefaces, one accent, and a measure that fits the eye. Here is what stays when you remove the decoration.</p>
+
+    <h2>Start with the reader</h2>
+    <p>A page is read, not admired. The reader has a few seconds to decide whether the next paragraph is worth their time. Everything that is not the next paragraph is a cost.</p>
+    <p>Set the body in a sans at screen size. Seventeen pixels is a floor, not a style. Give lines room: a line height of 1.6 lets the eye return to the next line without searching.</p>
+
+    <blockquote class="quote">Size and space create hierarchy. Color does not.</blockquote>
+
+    <h2>Let the serif do one job</h2>
+    <p>Serif type carries the large moments: headlines, numbers, a pull quote. Below about twenty pixels it competes with the body, so it does not appear there.</p>
+    <ul class="plain">
+      <li>Headlines and display numbers in the serif, at weight 500.</li>
+      <li>Everything you read or click in the sans.</li>
+      <li>Code and hex values in the mono.</li>
+    </ul>
+
+    <h2>Say it in tokens</h2>
+    <p>Decisions you write down once are decisions you stop re-making.</p>
+<pre><code>--bg:     #F5F4ED;
+--accent: #1C3D32;
+--serif:  "Source Serif 4";</code></pre>
+
+    <div class="pager row">
+      <a class="btn secondary" href="index.html">All notes</a>
+      <a class="btn ghost" href="index.html">Next note</a>
+    </div>
+  </article>
+</main>
+<footer class="inner site-footer">
+  <p class="caption">Field Notes · Built on dinsor-design.</p>
+</footer>
+</body>
+</html>

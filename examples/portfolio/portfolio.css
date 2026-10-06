@@ -1,0 +1,23 @@
+/* Portfolio example. Layout only; everything else comes from dist/dinsor.css. */
+
+.intro .display { max-width: 16ch; }
+.intro .lede { margin-top: var(--space-24); }
+
+.work { list-style: none; margin: 0; padding: 0; }
+
+.work-item { display: grid; gap: var(--space-16); padding: var(--space-24) 0; }
+.work-item + .work-item { border-top: 1px solid var(--line); }
+.work-item h3 { font-size: var(--text-h2); }
+.work-item .tags { display: flex; flex-wrap: wrap; gap: var(--space-8); }
+.work-item .year { font-variant-numeric: tabular-nums; }
+
+.about { display: grid; gap: var(--space-32); }
+.about .plain { margin-top: var(--space-16); }
+
+.contact .lede { margin-top: var(--space-16); }
+.contact .row { margin-top: var(--space-24); }
+
+@media (min-width: 768px) {
+  .work-item { grid-template-columns: 80px 1fr auto; gap: var(--space-32); align-items: baseline; }
+  .about { grid-template-columns: 1fr 1fr; gap: var(--space-64); }
+}

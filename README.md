@@ -33,7 +33,7 @@ Start at [AGENTS.md](AGENTS.md). Then copy markup from [components/](components/
 | [scripts/](scripts/) | `build.mjs`, `lint.mjs` |
 | [skills/](skills/) | Claude skill |
 | [specimen/](specimen/index.html) | Visual reference |
-| [examples/](examples/) | Demos built on the system. Not part of it |
+| [examples/](examples/) | Shop, blog, SaaS, docs, portfolio demos. Not part of the system |
 
 ## Change it
 

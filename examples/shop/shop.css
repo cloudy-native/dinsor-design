@@ -1,4 +1,4 @@
-/* Linden: sample shop built on ../../dist/dinsor.css. Shop-only layout lives here; nothing in this file is part of the design system. */
+/* Sample shop built on ../../dist/dinsor.css. Shop-only layout lives here; nothing in this file is part of the design system. */
 
 .quote { margin-top: var(--space-32); }
 .metric { margin-top: var(--space-24); }

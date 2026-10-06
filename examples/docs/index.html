@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting started — Quill docs</title>
+<link rel="stylesheet" href="../../dist/dinsor.css">
+<link rel="stylesheet" href="docs.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="inner site-header">
+  <a class="wordmark" href="index.html">Quill</a>
+  <nav aria-label="Primary">
+    <a href="index.html" aria-current="page">Docs</a>
+    <a href="#">Changelog</a>
+    <a href="#">GitHub</a>
+  </nav>
+</header>
+<main id="content" class="inner">
+  <div class="docs-layout">
+    <aside class="side" aria-label="Documentation">
+      <nav aria-labelledby="nav-start">
+        <h2 id="nav-start">START</h2>
+        <ul>
+          <li><a href="#install" aria-current="page">Install</a></li>
+          <li><a href="#config">Configure</a></li>
+          <li><a href="#options">Options</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="nav-guides">
+        <h2 id="nav-guides">GUIDES</h2>
+        <ul>
+          <li><a href="#">Themes</a></li>
+          <li><a href="#">Plugins</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <article class="doc">
+      <p class="overline">Start</p>
+      <h1>Getting started</h1>
+      <p class="lede">Quill turns a folder of Markdown into a static site. Install it, point it at a folder, and build.</p>
+
+      <h2 id="install">Install</h2>
+      <p>Quill needs Node 20 or newer.</p>
+<pre><code>npm install --save-dev quill
+npx quill build docs/</code></pre>
+      <div class="card callout">
+        <h3>Output</h3>
+        <p class="lede">The site is written to <code>dist/</code>. Serve it from any static host.</p>
+      </div>
+
+      <h2 id="config">Configure</h2>
+      <p>Put a <code>quill.json</code> next to your content. Every key is optional.</p>
+<pre><code>{
+  "title": "My docs",
+  "base": "/docs/",
+  "nav": ["index.md", "guides/"]
+}</code></pre>
+
+      <h2 id="options">Options</h2>
+      <table>
+        <thead>
+          <tr><th scope="col">Key</th><th scope="col">Default</th><th scope="col">What it does</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>title</code></td><td><code>"Docs"</code></td><td>Site title and page suffix.</td></tr>
+          <tr><td><code>base</code></td><td><code>"/"</code></td><td>Path prefix for every link.</td></tr>
+          <tr><td><code>nav</code></td><td>folder order</td><td>Sidebar entries, top to bottom.</td></tr>
+        </tbody>
+      </table>
+      <ul class="plain">
+        <li>Unknown keys are ignored with a warning.</li>
+        <li>Paths are relative to <code>quill.json</code>.</li>
+      </ul>
+    </article>
+  </div>
+</main>
+<footer class="inner site-footer">
+  <p class="caption">Quill · Sample docs built on dinsor-design.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,31 @@
+/* SaaS example. Layout only; everything else comes from dist/dinsor.css. */
+
+.hero .display { max-width: 14ch; }
+.hero .lede { margin-top: var(--space-24); }
+.hero .row { margin-top: var(--space-32); }
+.hero .metrics { margin-top: var(--space-64); }
+
+.feature { display: grid; gap: var(--space-16); padding: var(--space-32) 0; }
+.feature + .feature { border-top: 1px solid var(--line); }
+.feature .plain { margin-top: var(--space-16); }
+
+.quote-block { max-width: 40em; }
+.quote-block .caption { margin-top: var(--space-16); }
+
+.plans { display: grid; gap: var(--space-24); }
+.plan { display: flex; flex-direction: column; }
+.plan .metric { margin-top: var(--space-16); }
+.plan .plain { margin-top: var(--space-24); }
+.plan .btn { margin-top: var(--space-32); align-self: flex-start; }
+
+.faq dt { font-family: var(--serif); font-weight: 500; font-size: var(--text-h3); line-height: 1.3; }
+.faq dd { margin: var(--space-8) 0 0; max-width: var(--layout-measure); }
+.faq dd + dt { margin-top: var(--space-32); }
+
+.cta { margin-top: var(--space-96); }
+.cta .row { margin-top: var(--space-32); }
+
+@media (min-width: 768px) {
+  .feature { grid-template-columns: 1fr 2fr; gap: var(--space-48); }
+  .plans { grid-template-columns: repeat(3, 1fr); }
+}

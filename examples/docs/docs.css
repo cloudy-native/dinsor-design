@@ -1,0 +1,27 @@
+/* Docs example. Layout only; everything else comes from dist/dinsor.css. */
+
+.docs-layout { display: grid; gap: var(--space-32); }
+
+.side { font-size: var(--text-caption); line-height: 1.45; }
+.side h2 { font-family: var(--sans); font-size: var(--text-label); font-weight: 500; letter-spacing: 0.06em; line-height: 1.35; color: var(--accent); margin-bottom: var(--space-8); }
+.side ul { list-style: none; margin: 0; padding: 0; }
+.side a { display: inline-flex; align-items: center; min-height: var(--layout-hit-target); }
+.side a[aria-current="page"] { color: var(--ink); text-decoration: none; }
+.side nav + nav { margin-top: var(--space-24); }
+
+.doc h1 { font-size: var(--text-h1); }
+.doc .lede { margin-top: var(--space-16); }
+.doc h2 { margin-top: var(--space-64); }
+.doc h2 + p, .doc h2 + pre { margin-top: var(--space-16); }
+.doc p + p, .doc p + pre, .doc pre + p { margin-top: var(--space-16); }
+.doc .plain { margin-top: var(--space-16); }
+
+.doc table { width: 100%; margin-top: var(--space-16); border-collapse: collapse; font-size: var(--text-caption); line-height: 1.45; }
+.doc th { text-align: left; font-weight: 500; color: var(--olive); }
+.doc th, .doc td { padding: var(--space-12) var(--space-16) var(--space-12) 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+
+.callout { margin-top: var(--space-24); }
+
+@media (min-width: 768px) {
+  .docs-layout { grid-template-columns: 200px 1fr; gap: var(--space-64); align-items: start; }
+}
