@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Components — dinsor-design</title>
+<link rel="stylesheet" href="../../dist/dinsor.css">
+<link rel="stylesheet" href="../theme-switch.css">
+<link rel="stylesheet" href="components.css">
+<script src="../theme-switch.js"></script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<div class="inner theme-bar">
+  <label for="theme">Theme</label>
+  <select id="theme">
+    <option value="emerald">Emerald</option>
+    <option value="garnet">Garnet</option>
+    <option value="amethyst">Amethyst</option>
+    <option value="peacock">Peacock</option>
+    <option value="topaz">Topaz</option>
+  </select>
+</div>
+<header class="inner site-header">
+  <a class="wordmark" href="index.html">dinsor-design</a>
+  <nav class="catalog-nav" aria-label="On this page">
+    <a href="#foundations">Foundations</a>
+    <a href="#actions">Actions</a>
+    <a href="#forms">Forms</a>
+    <a href="#feedback">Feedback</a>
+    <a href="#content-blocks">Content</a>
+    <a href="#navigation">Navigation</a>
+    <a href="#layers">Layers</a>
+  </nav>
+</header>
+<main id="content" class="inner">
+  <section aria-labelledby="page-title">
+    <p class="overline">Catalog</p>
+    <h1 id="page-title" class="display">Every component.</h1>
+    <p class="lede">One page with each token, size, and component in the system. Markup for each lives in <code>components/</code>. Use the theme control to see the accent change.</p>
+  </section>
+
+  <section class="sec" id="foundations" aria-labelledby="foundations-t">
+    <p class="overline">Foundations</p>
+    <h2 id="foundations-t">Color, type, space, shape</h2>
+    <p class="hint">Tokens only. Anything not on this page is not in the system.</p>
+    <h3>Color</h3>
+    <ul class="swatches">
+      <li><span class="chip c-bg"></span><span><code>--bg</code><br><span class="caption">Page</span></span></li>
+      <li><span class="chip c-surface"></span><span><code>--surface</code><br><span class="caption">Cards, inputs, code</span></span></li>
+      <li><span class="chip c-sand"></span><span><code>--sand</code><br><span class="caption">Secondary fills</span></span></li>
+      <li><span class="chip c-ink"></span><span><code>--ink</code><br><span class="caption">Text, focus</span></span></li>
+      <li><span class="chip c-ink-soft"></span><span><code>--ink-soft</code><br><span class="caption">Secondary text</span></span></li>
+      <li><span class="chip c-olive"></span><span><code>--olive</code><br><span class="caption">Captions</span></span></li>
+      <li><span class="chip c-stone"></span><span><code>--stone</code><br><span class="caption">Meta</span></span></li>
+      <li><span class="chip c-line"></span><span><code>--line</code><br><span class="caption">Hairline</span></span></li>
+      <li><span class="chip c-accent"></span><span><code>--accent</code><br><span class="caption">Links, primary, overlines</span></span></li>
+      <li><span class="chip c-accent-ink"></span><span><code>--accent-ink</code><br><span class="caption">Text on accent</span></span></li>
+      <li><span class="chip c-accent-hover"></span><span><code>--accent-hover</code><br><span class="caption">Primary hover</span></span></li>
+      <li><span class="chip c-tag-quiet"></span><span><code>--tag-quiet</code><br><span class="caption">Quiet tag, notice</span></span></li>
+      <li><span class="chip c-tag"></span><span><code>--tag</code><br><span class="caption">Tag</span></span></li>
+      <li><span class="chip c-danger"></span><span><code>--danger</code><br><span class="caption">Errors only</span></span></li>
+      <li><span class="chip c-dark"></span><span><code>--dark</code><br><span class="caption">Dark band</span></span></li>
+      <li><span class="chip c-dark-surface"></span><span><code>--dark-surface</code><br><span class="caption">Dark containers</span></span></li>
+      <li><span class="chip c-accent-on-dark"></span><span><code>--accent-on-dark</code><br><span class="caption">Accent on dark</span></span></li>
+    </ul>
+    <h3>Type</h3>
+    <div>
+    <div class="type-row"><div><code>--text-display</code><p class="caption">Serif 48 / 1.10 · 36 under 768</p></div><p class="t-display">Warm paper</p></div>
+    <div class="type-row"><div><code>--text-h1</code><p class="caption">Serif 32 / 1.20</p></div><p class="t-h1">Heading one</p></div>
+    <div class="type-row"><div><code>--text-h2</code><p class="caption">Serif 22 / 1.25 · pull quote</p></div><p class="t-h2">Heading two</p></div>
+    <div class="type-row"><div><code>--text-h3</code><p class="caption">Serif 18 / 1.30</p></div><p class="t-h3">Heading three</p></div>
+    <div class="type-row"><div><code>--text-metric</code><p class="caption">Serif 32 / 1.10 · accent</p></div><p class="t-metric">1,284</p></div>
+    <div class="type-row"><div><code>--text-body</code><p class="caption">Sans 17 / 1.60</p></div><p class="t-body">Body text is a sans at screen size.</p></div>
+    <div class="type-row"><div><code>--text-control</code><p class="caption">Sans 16</p></div><p class="t-control">Button label</p></div>
+    <div class="type-row"><div><code>--text-caption</code><p class="caption">Sans 14 / 1.45</p></div><p class="t-caption">Caption, tag, code, error</p></div>
+    <div class="type-row"><div><code>--text-label</code><p class="caption">Sans 12 · 500 · tracking 0.06em</p></div><p class="t-label">OVERLINE OR FIELD LABEL</p></div>
+    </div>
+    <h3>Space</h3>
+    <div>
+    <div class="space-row"><code>--space-4</code><span class="bar b4"></span></div>
+    <div class="space-row"><code>--space-8</code><span class="bar b8"></span></div>
+    <div class="space-row"><code>--space-12</code><span class="bar b12"></span></div>
+    <div class="space-row"><code>--space-16</code><span class="bar b16"></span></div>
+    <div class="space-row"><code>--space-24</code><span class="bar b24"></span></div>
+    <div class="space-row"><code>--space-32</code><span class="bar b32"></span></div>
+    <div class="space-row"><code>--space-48</code><span class="bar b48"></span></div>
+    <div class="space-row"><code>--space-64</code><span class="bar b64"></span></div>
+    <div class="space-row"><code>--space-96</code><span class="bar b96"></span></div>
+    </div>
+    <h3>Radius and depth</h3>
+    <div class="row">
+      <figure><div class="shape r2"></div><figcaption>2 · chip</figcaption></figure>
+      <figure><div class="shape r4"></div><figcaption>4 · control</figcaption></figure>
+      <figure><div class="shape r8"></div><figcaption>8 · card</figcaption></figure>
+    </div>
+    <p class="caption">Flat by default. <code>--shadow-floating</code> only on menus and dialogs.</p>
+  </section>
+
+  <section class="sec" id="actions" aria-labelledby="actions-t">
+    <p class="overline">Actions</p>
+    <h2 id="actions-t">Buttons and links</h2>
+    <p class="hint">One primary button per view. No other button styles.</p>
+    <div class="demo"><p class="label">Button</p><div class="demo-box">
+      <div class="row">
+        <a class="btn primary" href="#actions">Primary</a>
+        <button type="button" class="btn secondary">Secondary</button>
+        <button type="button" class="btn ghost">Ghost</button>
+        <button type="button" class="btn primary" disabled>Disabled</button>
+      </div>
+    </div></div>
+    <div class="demo"><p class="label">Link</p><div class="demo-box">
+      <p>Links stay ink green, with the underline 3px off the text. <a href="#actions">Read the rules</a>.</p>
+    </div></div>
+  </section>
+
+  <section class="sec" id="forms" aria-labelledby="forms-t">
+    <p class="overline">Forms</p>
+    <h2 id="forms-t">Inputs and choices</h2>
+    <p class="hint">44px minimum height. Labels are tracked sans. Errors use <code>--danger</code> and appear only when invalid.</p>
+    <div class="form-grid">
+      <div class="field"><label for="f-text">Text</label><input id="f-text" type="text" value="Source Sans 3" autocomplete="off"></div>
+      <div class="field"><label for="f-err">With error</label><input id="f-err" type="text" aria-describedby="f-err-msg" aria-invalid="true"><p class="error" id="f-err-msg">Enter a value.</p></div>
+      <div class="field"><label for="f-dis">Disabled</label><input id="f-dis" type="text" value="Not editable" disabled></div>
+      <div class="field"><label for="f-sel">Select</label><select id="f-sel"><option>Monthly</option><option>Yearly</option></select></div>
+      <div class="field"><label for="f-msg">Textarea</label><textarea id="f-msg"></textarea><p class="hint">Plain text. 500 characters at most.</p></div>
+      <div>
+        <label class="check"><input type="checkbox" checked> Checkbox</label>
+        <label class="check"><input type="radio" name="r" checked> Radio, selected</label>
+        <label class="check"><input type="radio" name="r"> Radio</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="feedback" aria-labelledby="feedback-t">
+    <p class="overline">Feedback</p>
+    <h2 id="feedback-t">Messages, tags, progress</h2>
+    <p class="hint">Quiet by default. Red only for failures.</p>
+    <div class="demo"><p class="label">Notice</p><div class="demo-box">
+      <div class="stack">
+        <div class="notice" role="status"><p class="notice-title">Saved</p><p>Your changes are live.</p></div>
+        <div class="notice danger" role="alert"><p class="notice-title">Could not save</p><p>Check the highlighted fields and try again.</p></div>
+      </div>
+    </div></div>
+    <div class="demo"><p class="label">Tag</p><div class="demo-box">
+      <div class="row"><span class="tag quiet">Quiet</span><span class="tag">Default</span></div>
+    </div></div>
+    <div class="demo"><p class="label">Progress</p><div class="demo-box">
+      <label for="p1">Setup, 60%</label>
+      <progress id="p1" max="100" value="60">60%</progress>
+    </div></div>
+  </section>
+
+  <section class="sec" id="content-blocks" aria-labelledby="content-blocks-t">
+    <p class="overline">Content</p>
+    <h2 id="content-blocks-t">Type blocks, cards, data</h2>
+    <p class="hint">Serif for display only. Cards have no border and no shadow.</p>
+    <div class="demo"><p class="label">Overline, heading, lede</p><div class="demo-box">
+      <p class="overline">Overline</p>
+      <h2>Section title</h2>
+      <p class="lede">One or two sentences, at most 66 characters wide.</p>
+    </div></div>
+    <div class="demo"><p class="label">Metric</p><div class="demo-box">
+      <div class="metrics">
+        <div><p class="metric">94%</p><p class="caption">Matched</p></div>
+        <div><p class="metric">3 hrs</p><p class="caption">To close</p></div>
+      </div>
+    </div></div>
+    <div class="demo"><p class="label">Pull quote</p><div class="demo-box">
+      <blockquote class="quote">Size and space create hierarchy. Color does not.</blockquote>
+    </div></div>
+    <div class="demo"><p class="label">Card</p><div class="demo-box">
+      <article class="card"><h3>Card title</h3><p class="lede">Short supporting text.</p></article>
+    </div></div>
+    <div class="demo"><p class="label">List</p><div class="demo-box">
+      <ul class="plain"><li>First item.</li><li>Second item.</li><li>Third item.</li></ul>
+    </div></div>
+    <div class="demo"><p class="label">Table</p><div class="demo-box">
+      <table class="table">
+        <thead><tr><th scope="col">Name</th><th scope="col">Status</th><th scope="col" class="num">Total</th></tr></thead>
+        <tbody>
+          <tr><td>First</td><td>Paid</td><td class="num">$12.00</td></tr>
+          <tr><td>Second</td><td>Due</td><td class="num">$39.00</td></tr>
+        </tbody>
+      </table>
+    </div></div>
+    <div class="demo"><p class="label">Code</p><div class="demo-box">
+      <pre><code>--bg:     #F5F4ED;
+--accent: #1C3D32;</code></pre>
+    </div></div>
+    <div class="demo"><p class="label">Hairline</p><div class="demo-box">
+      <p>Whitespace separates regions.</p>
+      <hr>
+      <p>A hairline only when the boundary has to be explicit.</p>
+    </div></div>
+  </section>
+
+  <section class="sec" id="navigation" aria-labelledby="navigation-t">
+    <p class="overline">Navigation</p>
+    <h2 id="navigation-t">Wayfinding</h2>
+    <p class="hint">Current page is ink, not green, and not underlined.</p>
+    <div class="demo"><p class="label">Breadcrumb</p><div class="demo-box">
+      <nav aria-label="Breadcrumb"><ol class="crumbs"><li><a href="#navigation">Home</a></li><li><a href="#navigation">Section</a></li><li><a href="#navigation" aria-current="page">Page</a></li></ol></nav>
+    </div></div>
+    <div class="demo"><p class="label">Pagination</p><div class="demo-box">
+      <nav class="pagination" aria-label="Pages"><a class="btn" href="#navigation">Previous</a><a class="btn" href="#navigation">1</a><a class="btn" href="#navigation" aria-current="page">2</a><a class="btn" href="#navigation">3</a><a class="btn" href="#navigation">Next</a></nav>
+    </div></div>
+    <div class="demo"><p class="label">Accordion</p><div class="demo-box">
+      <div class="accordion">
+        <details open><summary>First question</summary><p>Answer text.</p></details>
+        <details><summary>Second question</summary><p>Answer text.</p></details>
+      </div>
+    </div></div>
+    <div class="demo"><p class="label">Header and footer</p><div class="demo-box">
+      <p>This page shows both: <code>skip</code>, <code>site-header</code> with <code>wordmark</code> and <code>nav</code>, and <code>site-footer</code>.</p>
+    </div></div>
+  </section>
+
+  <section class="sec" id="layers" aria-labelledby="layers-t">
+    <p class="overline">Layers</p>
+    <h2 id="layers-t">Menu, dialog, dark band</h2>
+    <p class="hint">The only things allowed a shadow, and the dark band only when a brief asks.</p>
+    <div class="demo"><p class="label">Menu</p><div class="demo-box">
+      <div class="menu"><a href="#layers">One</a><a href="#layers">Two</a></div>
+    </div></div>
+    <div class="demo"><p class="label">Dialog (static preview)</p><div class="demo-box dialog-preview">
+      <dialog open aria-labelledby="dlg-title"><h2 id="dlg-title">Delete this item?</h2><p class="lede">This cannot be undone.</p><form method="dialog" class="row"><button class="btn primary">Delete</button><button class="btn ghost">Cancel</button></form></dialog>
+    </div></div>
+  </section>
+</main>
+<section class="dark" aria-labelledby="dark-title">
+  <div class="inner">
+    <p class="overline">Dark band</p>
+    <h2 id="dark-title">Only when a brief asks</h2>
+    <p class="lede">Links here use the lighter accent, and the focus ring switches to ivory.</p>
+    <p class="lede"><a href="#foundations">Back to top</a></p>
+  </div>
+</section>
+<footer class="inner site-footer">
+  <p class="caption">Catalog built on dinsor-design.</p>
+</footer>
+</body>
+</html>

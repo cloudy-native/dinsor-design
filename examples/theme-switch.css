@@ -1,0 +1,12 @@
+/* Demo-only: the theme control above each example page. */
+
+.theme-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-12);
+  padding-top: var(--space-12);
+  padding-bottom: 0;
+}
+
+.theme-bar select { width: auto; min-width: 160px; }

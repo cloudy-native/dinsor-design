@@ -1,0 +1,63 @@
+/* Component catalog. Layout and labels only; the components come from dist/dinsor.css. */
+
+.catalog-nav { display: flex; flex-wrap: wrap; gap: var(--space-4) var(--space-16); }
+
+.sec { padding-top: var(--space-64); }
+.sec > h2 { margin-bottom: var(--space-8); }
+.sec > .hint { margin-bottom: var(--space-24); max-width: var(--layout-measure); }
+
+.demo { display: grid; gap: var(--space-8); margin-top: var(--space-24); }
+.demo > .label { font-size: var(--text-label); font-weight: 500; line-height: 1.35; letter-spacing: 0.06em; color: var(--stone); }
+.demo-box { padding: var(--space-24) 0; border-top: 1px solid var(--line); }
+
+.grid { display: grid; gap: var(--space-24); }
+
+.swatches { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-12); grid-template-columns: 1fr; }
+.swatches li { display: flex; align-items: center; gap: var(--space-12); min-height: var(--layout-hit-target); }
+.chip { width: 32px; height: 32px; flex: none; border: 1px solid var(--line); border-radius: var(--radius-chip); }
+.swatches code { font-size: var(--text-caption); }
+.c-bg { background: var(--bg); } .c-surface { background: var(--surface); } .c-sand { background: var(--sand); }
+.c-ink { background: var(--ink); } .c-ink-soft { background: var(--ink-soft); } .c-olive { background: var(--olive); }
+.c-stone { background: var(--stone); } .c-line { background: var(--line); } .c-accent { background: var(--accent); }
+.c-accent-ink { background: var(--accent-ink); } .c-accent-hover { background: var(--accent-hover); }
+.c-tag-quiet { background: var(--tag-quiet); } .c-tag { background: var(--tag); } .c-danger { background: var(--danger); }
+.c-dark { background: var(--dark); } .c-dark-surface { background: var(--dark-surface); } .c-accent-on-dark { background: var(--accent-on-dark); }
+
+.type-row { display: grid; gap: var(--space-4); padding: var(--space-16) 0; border-top: 1px solid var(--line); }
+.t-display { margin: 0; font-family: var(--serif); font-size: var(--text-display); font-weight: 500; line-height: 1.1; }
+.t-h1 { margin: 0; font-family: var(--serif); font-size: var(--text-h1); font-weight: 500; line-height: 1.2; }
+.t-h2 { margin: 0; font-family: var(--serif); font-size: var(--text-h2); font-weight: 500; line-height: 1.25; }
+.t-h3 { margin: 0; font-family: var(--serif); font-size: var(--text-h3); font-weight: 500; line-height: 1.3; }
+.t-metric { margin: 0; font-family: var(--serif); font-size: var(--text-metric); font-weight: 500; line-height: 1.1; }
+.t-body { margin: 0; }
+.t-control { margin: 0; font-size: var(--text-control); }
+.t-caption { margin: 0; font-size: var(--text-caption); line-height: 1.45; }
+.t-label { margin: 0; font-size: var(--text-label); font-weight: 500; line-height: 1.35; letter-spacing: 0.06em; }
+
+.space-row { display: flex; align-items: center; gap: var(--space-16); min-height: var(--space-24); }
+.space-row + .space-row { margin-top: var(--space-8); }
+.bar { height: var(--space-12); background: var(--accent); border-radius: var(--radius-chip); }
+.b4 { width: 4px; } .b8 { width: 8px; } .b12 { width: 12px; } .b16 { width: 16px; } .b24 { width: 24px; }
+.b32 { width: 32px; } .b48 { width: 48px; } .b64 { width: 64px; } .b96 { width: 96px; }
+
+.shape { height: var(--layout-hit-target); background: var(--sand); }
+.r2 { width: 64px; border-radius: var(--radius-chip); }
+.r4 { width: 96px; border-radius: var(--radius-control); }
+.r8 { width: 128px; border-radius: var(--radius-card); }
+
+/* Static preview of a dialog: the real one opens in the top layer. */
+.dialog-preview dialog { position: static; margin: 0; }
+
+.form-grid { display: grid; gap: var(--space-24); max-width: 480px; }
+
+@media (min-width: 768px) {
+  .grid.two { grid-template-columns: 1fr 1fr; }
+  .swatches { grid-template-columns: 1fr 1fr; column-gap: var(--space-32); }
+  .type-row { grid-template-columns: 200px 1fr; gap: var(--space-24); align-items: baseline; }
+}
+
+.sec h3 { margin-top: var(--space-48); }
+.sec h3:first-of-type { margin-top: 0; }
+.sec h3 + * { margin-top: var(--space-16); }
+.sec h3 + .row { gap: var(--space-32); }
+main + .dark { margin-top: var(--space-96); }

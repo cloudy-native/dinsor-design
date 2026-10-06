@@ -4,35 +4,43 @@ Warm paper, one green. Pages should read like a typeset document, then work like
 
 Source Serif 4 carries headlines, big numbers, and pull quotes. Source Sans 3 carries body text, navigation, and controls. The only chromatic brand color is ink green `#1C3D32`, and it stays rare. Surfaces are flat. Neutrals stay warm.
 
-The rules for an implementation agent are in [DESIGN.md](DESIGN.md). Open [index.html](index.html) for the specimen.
-
 ![Specimen: parchment page, serif headline, sans body, and the color tokens](docs/screenshots/specimen.png)
 
-## Sample shop
+## Use it
 
-Linden is a household-goods shop built only from those rules. It has a catalog, product pages, a cart, checkout, an empty cart, an order receipt, and a short reading note.
+```html
+<link rel="stylesheet" href="dist/dinsor.css">
+```
 
-Open [shop.html](shop.html). No build step.
+Plain CSS. No build step. Copy `dist/` and `fonts/` together.
 
-![Shop catalog, three product cards](docs/screenshots/shop.png)
+Five jewel-tone accents: `<html data-theme="garnet">`. See [dist/tokens.md](dist/tokens.md). Every example has a theme switcher.
 
-![Mixing bowl product page](docs/screenshots/product.png)
+## For coding agents
 
-![Cart with two line items and a summary](docs/screenshots/cart.png)
+Start at [AGENTS.md](AGENTS.md). Then copy markup from [components/](components/) or start from [templates/page.html](templates/page.html). Check output with `node scripts/lint.mjs <files>`.
 
-## Pages
+## Layout
 
-| File | What it is |
+| Path | What it is |
 | --- | --- |
-| [index.html](index.html) | Design specimen |
-| [shop.html](shop.html) | Catalog |
-| [product.html](product.html) | Mixing bowl |
-| [napkins.html](napkins.html) | Linen napkins |
-| [stool.html](stool.html) | Oak stool |
-| [cart.html](cart.html) | Cart |
-| [cart-empty.html](cart-empty.html) | Empty cart |
-| [checkout.html](checkout.html) | Checkout |
-| [order.html](order.html) | Order receipt |
-| [story.html](story.html) | Reading note |
-| [DESIGN.md](DESIGN.md) | Design rules |
-| [site.css](site.css) | Shared shop styles |
+| [AGENTS.md](AGENTS.md) | Agent entry point: rules, read order, lint |
+| [DESIGN.md](DESIGN.md) | Rationale and rules |
+| [tokens/tokens.json](tokens/tokens.json) | Single source of every value |
+| [src/](src/) | Authored CSS: fonts, base, components |
+| [dist/](dist/) | Generated: `dinsor.css`, parts, `tokens.md`, Tailwind preset |
+| [fonts/](fonts/) | woff2 files |
+| [components/](components/) | Copy-paste markup, one file per component |
+| [templates/](templates/) | Starter page |
+| [scripts/](scripts/) | `build.mjs`, `lint.mjs` |
+| [skills/](skills/) | Claude skill |
+| [specimen/](specimen/index.html) | Visual reference |
+| [examples/](examples/) | Shop, blog, SaaS, docs, portfolio demos. Not part of the system |
+
+## Change it
+
+Edit `tokens/tokens.json` or `src/*.css`, run `npm run build`, commit `dist/`. CI runs `npm run check`.
+
+## License
+
+[MIT](LICENSE). The font files in [fonts/](fonts/) keep their own SIL OFL 1.1 license.
