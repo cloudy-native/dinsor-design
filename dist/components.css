@@ -157,7 +157,8 @@ label {
   letter-spacing: 0.06em;
 }
 
-input {
+input,
+select {
   width: 100%;
   min-height: var(--layout-hit-target);
   padding: var(--space-12) var(--space-16);

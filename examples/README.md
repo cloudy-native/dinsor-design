@@ -10,4 +10,6 @@ Demos built on `dist/dinsor.css`. They show the system in use. Nothing here is p
 | [docs/](docs/index.html) | Sidebar nav, code blocks, table, callout |
 | [portfolio/](portfolio/index.html) | Intro, work list with tags, about, contact |
 
+Each page has a theme switcher (`theme-switch.js`, demo only) that sets `data-theme`.
+
 Each has its own small stylesheet for layout only. Run `node scripts/lint.mjs examples/<name>` to check one.

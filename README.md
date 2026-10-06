@@ -14,6 +14,8 @@ Source Serif 4 carries headlines, big numbers, and pull quotes. Source Sans 3 ca
 
 Plain CSS. No build step. Copy `dist/` and `fonts/` together.
 
+Five jewel-tone accents: `<html data-theme="garnet">`. See [dist/tokens.md](dist/tokens.md). Every example has a theme switcher.
+
 ## For coding agents
 
 Start at [AGENTS.md](AGENTS.md). Then copy markup from [components/](components/) or start from [templates/page.html](templates/page.html). Check output with `node scripts/lint.mjs <files>`.

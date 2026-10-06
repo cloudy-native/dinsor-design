@@ -10,6 +10,8 @@ Warm paper, one ink green. Serif display, sans body. Flat. Use this system for a
 
 Or copy `dist/` and `fonts/` together (the CSS loads `../fonts/`). Tailwind: `presets: [require("./dist/tailwind.preset.cjs")]`.
 
+Color variants: `<html data-theme="garnet">` (emerald default, garnet, amethyst, peacock, topaz). One theme per page. Never mix accents. Never hardcode a theme color; use `var(--accent)`.
+
 Start from [templates/page.html](templates/page.html). Copy markup from [components/](components/). Do not write new CSS unless no component fits. If you must, use only `var(--*)` tokens.
 
 ## Read order

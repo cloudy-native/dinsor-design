@@ -82,3 +82,15 @@
 | `var(--layout-measure)` | `66ch` | prose width |
 | `var(--layout-page-padding)` | `20px` | under 768px. 32px from 768 up |
 | `var(--layout-hit-target)` | `44px` | minimum control height |
+
+## themes
+
+Set `<html data-theme="name">`. One theme per page. Hover, tags and on-dark derive from the accent.
+
+| theme | accent | feel |
+|---|---|---|
+| `emerald` | `#1C3D32` | default. Deep green |
+| `garnet` | `#6B1E2E` | wine red |
+| `amethyst` | `#4B2A63` | deep violet |
+| `peacock` | `#134B52` | blue-green |
+| `topaz` | `#6E430C` | bronze amber |
