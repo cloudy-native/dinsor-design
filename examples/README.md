@@ -13,4 +13,4 @@ Demos built on `dist/dinsor.css`. They show the system in use. Nothing here is p
 
 Each page has a theme switcher (`theme-switch.js`, demo only) that sets `data-theme`.
 
-Each has its own small stylesheet for layout only. Run `node scripts/lint.mjs examples/<name>` to check one.
+Each has its own small stylesheet for layout only. Run `bun scripts/lint.mjs examples/<name>` to check one.

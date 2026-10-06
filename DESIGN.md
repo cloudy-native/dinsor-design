@@ -134,6 +134,6 @@ Markup for each lives in [components/](components/). Copy it. Do not restyle it.
 - [ ] The only chromatic color is the ink green, and it covers well under half a screen
 - [ ] Body, nav, buttons, and captions are Source Sans 3 (or the named fallback)
 - [ ] Headings, display numbers, and pull quotes are Source Serif 4 at weight 500
-- [ ] `node scripts/lint.mjs <your files>` passes. It rejects any color, size, radius, space, shadow, or class outside the system
+- [ ] `bun scripts/lint.mjs <your files>` passes. It rejects any color, size, radius, space, shadow, or class outside the system
 - [ ] 375 and 1280 both read cleanly, with no horizontal scroll
 - [ ] Keyboard focus is visible on every control

@@ -5,10 +5,22 @@
   "license": "MIT",
   "type": "module",
   "style": "dist/dinsor.css",
-  "files": ["dist", "fonts", "components", "templates", "tokens", "scripts", "AGENTS.md", "DESIGN.md", "llms.txt", "skills"],
+  "files": [
+    "dist",
+    "fonts",
+    "components",
+    "templates",
+    "tokens",
+    "scripts",
+    "AGENTS.md",
+    "DESIGN.md",
+    "llms.txt",
+    "skills"
+  ],
   "scripts": {
-    "build": "node scripts/build.mjs",
-    "lint": "node scripts/lint.mjs",
-    "check": "node scripts/build.mjs && git diff --exit-code dist && node scripts/lint.mjs"
-  }
+    "build": "bun scripts/build.mjs",
+    "lint": "bun scripts/lint.mjs",
+    "check": "bun scripts/build.mjs && git diff --exit-code dist && bun scripts/lint.mjs"
+  },
+  "packageManager": "bun@1.4.2"
 }

@@ -1,4 +1,4 @@
-// Usage: node scripts/lint.mjs [path ...]   (files or dirs; default: whole repo)
+// Usage: bun scripts/lint.mjs [path ...]   (files or dirs; default: whole repo)
 // Fails on anything outside tokens/tokens.json. No dependencies.
 import { readFileSync, readdirSync, statSync, existsSync } from "node:fs";
 import { dirname, join, resolve, relative, extname } from "node:path";
