@@ -1,0 +1,13 @@
+{
+  "name": "dinsor-design",
+  "version": "0.2.0",
+  "description": "Warm-paper design system: tokens, CSS, components, lint.",
+  "type": "module",
+  "style": "dist/dinsor.css",
+  "files": ["dist", "fonts", "components", "templates", "tokens", "scripts", "AGENTS.md", "DESIGN.md", "llms.txt", "skills"],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "lint": "node scripts/lint.mjs",
+    "check": "node scripts/build.mjs && git diff --exit-code dist && node scripts/lint.mjs"
+  }
+}

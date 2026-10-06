@@ -2,7 +2,7 @@
 
 Derived from the Kami sample (https://kami.tw93.fun/index.html). Same intent: a warm paper page, one restrained accent, size-led hierarchy, flat surfaces, editorial rhythm. Not a recolor of Kami.
 
-Read this file before changing UI. Do not import Kami's ink blue or its serif body.
+Read this file before changing UI. Entry point for agents: [AGENTS.md](AGENTS.md). Do not import Kami's ink blue or its serif body.
 
 ## Intent
 
@@ -28,7 +28,7 @@ Do not "correct" these back toward Kami.
 - Breakpoints: 375 / 768 / 1280. Mobile first.
 - A11y: WCAG AA. Visible focus. Hit targets at least 44px.
 - Motion: none, unless a later brief lists it. Support `prefers-reduced-motion`.
-- Do not add colors, type sizes, radii, or shadows that are not in this file.
+- Do not add colors, type sizes, radii, spacing, or shadows that are not in `tokens/tokens.json`.
 - Do not invent marketing copy. Missing strings stay as `[copy]`.
 
 ## Voice
@@ -40,66 +40,36 @@ Quiet, specific, short. The page sounds like a person who edits, not a brand tha
 
 ## Tokens
 
-Use these names as CSS variables. No other colors.
+Source: [tokens/tokens.json](tokens/tokens.json). Table: [dist/tokens.md](dist/tokens.md). CSS: [dist/tokens.css](dist/tokens.css). Use the variables. Never type a hex, px size, radius, or shadow that is not a token.
 
-### Canvas
+### Rules the values cannot say
 
-| token | hex | use |
-|---|---|---|
-| `--bg` | `#F5F4ED` | page background. Never `#fff`, never cool gray |
-| `--surface` | `#FAF9F5` | cards, code blocks, elevated paper |
-| `--sand` | `#E8E6DC` | secondary buttons, interactive fills |
-| `--ink` | `#141413` | primary text. Not pure black |
-| `--ink-soft` | `#3D3D3A` | secondary text |
-| `--olive` | `#504E49` | quotes, captions, de-emphasized text |
-| `--stone` | `#6B6A64` | footnotes, meta |
-| `--line` | `#D9D6CC` | the one hairline, only when a boundary must be explicit |
-
-Warm neutrals stay yellow-brown (R ≈ G > B). Do not green-shift the paper.
-
-### Accent
-
-| token | hex | use |
-|---|---|---|
-| `--accent` | `#1C3D32` | links, one primary button, overlines, key numbers |
-| `--accent-ink` | `#FAF9F5` | text on `--accent`. Ivory, not pure white |
-| `--accent-hover` | `#143028` | primary button hover. Darken, do not brighten |
-| `--tag-quiet` | `#E7EFE9` | receding tag fill |
-| `--tag` | `#D9E6DE` | default tag fill |
-| `--danger` | `#B53333` | errors only. Not a brand color |
-
-Tag fills are solid hex. No `rgba`. No gradients.
-
-### Dark surfaces
-
-Only when a brief asks for a dark band. Not the default page.
-
-| token | hex | use |
-|---|---|---|
-| `--dark` | `#141413` | dark page base |
-| `--dark-surface` | `#30302E` | dark containers |
-| `--accent-on-dark` | `#8FBFAB` | links and labels on `--dark`. Still one green |
+- Canvas: `--bg` is the page. Never `#fff`, never cool gray. Warm neutrals stay yellow-brown (R ≈ G > B). Do not green-shift the paper.
+- Accent: `--accent` is the only chromatic brand color. Links, one primary button, overlines, key numbers. Hover darkens (`--accent-hover`), never brightens.
+- Tag fills are solid hex. No `rgba`. No gradients.
+- `--danger` is for errors only.
+- Dark surfaces only when a brief asks for a dark band. Not the default page.
 
 ### Type
 
 Two families. Do not swap their jobs.
 
-- Display: `"Source Serif 4", "Iowan Old Style", Palatino, "Palatino Linotype", serif`. Headlines, display numbers, pull quotes. Weight 500. Never 600 or higher.
-- Body: `"Source Sans 3", "Avenir Next", "Segoe UI", sans-serif`. Body, nav, buttons, captions, labels, lists. Weight 400. Labels may use 500.
-- Mono: `"JetBrains Mono", ui-monospace, monospace`. Code, hex, version strings. Tabular figures on metrics.
+- Display `--serif`: headlines, display numbers, pull quotes. Weight 500. Never 600 or higher.
+- Body `--sans`: body, nav, buttons, captions, labels, lists. Weight 400. Labels may use 500.
+- Mono `--mono`: code, hex, version strings. Tabular figures on metrics.
 
-| role | face | size | weight | line-height |
+| role | face | size token | weight | line-height |
 |---|---|---|---|---|
-| display | serif | 48px | 500 | 1.10 |
-| h1 | serif | 32px | 500 | 1.20 |
-| h2 | serif | 22px | 500 | 1.25 |
-| h3 | serif | 18px | 500 | 1.30 |
-| body | sans | 17px | 400 | 1.60 |
-| caption | sans | 14px | 400 | 1.45 |
-| label | sans | 12px | 500 | 1.35 |
-| metric | serif | 32px | 500 | 1.10 |
+| display | serif | `--text-display` 48px | 500 | 1.10 |
+| h1 | serif | `--text-h1` 32px | 500 | 1.20 |
+| h2 | serif | `--text-h2` 22px | 500 | 1.25 |
+| h3 | serif | `--text-h3` 18px | 500 | 1.30 |
+| body | sans | `--text-body` 17px | 400 | 1.60 |
+| caption | sans | `--text-caption` 14px | 400 | 1.45 |
+| label | sans | `--text-label` 12px | 500 | 1.35 |
+| metric | serif | `--text-metric` 32px | 500 | 1.10 |
 
-At 375px, display drops to 36px. Nothing else shrinks except horizontal padding.
+At 375px, display drops to 36px (`--text-display-mobile`). Nothing else shrinks except horizontal padding.
 
 Label tracking: `0.06em`. No small-caps. No italic, except pull quotes.
 
@@ -107,7 +77,7 @@ Pull quote: display serif, italic, 22px, `--olive`, no border and no quotation-m
 
 ### Space
 
-4px base. Use only: 4, 8, 12, 16, 24, 32, 48, 64, 96.
+4px base. Use only `--space-4/8/12/16/24/32/48/64/96`.
 
 | step | use |
 |---|---|
@@ -117,19 +87,17 @@ Pull quote: display serif, italic, 22px, `--olive`, no border and no quotation-m
 | 48–64 | under a section title |
 | 96 | between major sections |
 
-Max content width: 1040px. Page padding: 20px under 768, 32px from 768 up.
+Max content width 1040px. Page padding 20px under 768, 32px from 768 up.
 
 ### Radius and depth
 
-| token | value | use |
-|---|---|---|
-| `--radius-chip` | 2px | tags |
-| `--radius-control` | 4px | buttons, inputs, code |
-| `--radius-card` | 8px | cards |
+Radii: `--radius-chip` 2px (tags), `--radius-control` 4px (buttons, inputs, code), `--radius-card` 8px (cards).
 
-Flat by default. No drop shadow. A shadow is allowed only on a real floating layer (menu, dialog) and only as `0 8px 24px rgba(20, 20, 19, 0.08)`. Screenshots sit on `--surface` with no shadow.
+Flat by default. No drop shadow. A shadow is allowed only on a real floating layer (menu, dialog), and only `--shadow-floating`. Screenshots sit on `--surface` with no shadow.
 
 ## Components
+
+Markup for each lives in [components/](components/). Copy it. Do not restyle it.
 
 **Button, primary.** `--accent` fill, `--accent-ink` text, body sans 16px, padding 12px 16px, radius 4px, no shadow. Hover: `--accent-hover`. Focus: 2px `--ink` outline, 2px offset. Disabled: 40% opacity, no pointer.
 
@@ -166,6 +134,6 @@ Flat by default. No drop shadow. A shadow is allowed only on a real floating lay
 - [ ] The only chromatic color is the ink green, and it covers well under half a screen
 - [ ] Body, nav, buttons, and captions are Source Sans 3 (or the named fallback)
 - [ ] Headings, display numbers, and pull quotes are Source Serif 4 at weight 500
-- [ ] No size, color, radius, or shadow from outside this file
+- [ ] `node scripts/lint.mjs <your files>` passes. It rejects any color, size, radius, space, shadow, or class outside the system
 - [ ] 375 and 1280 both read cleanly, with no horizontal scroll
 - [ ] Keyboard focus is visible on every control

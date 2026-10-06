@@ -1,0 +1,11 @@
+# dinsor-design
+
+> Warm-paper design system: ink green accent, serif display, sans body, flat surfaces. Plain CSS, no build step to use.
+
+- [AGENTS.md](AGENTS.md): start here. Setup, rules, lint command
+- [components/](components/): copy-paste markup, one file per component
+- [templates/page.html](templates/page.html): starter page
+- [dist/tokens.md](dist/tokens.md): every allowed value
+- [dist/dinsor.css](dist/dinsor.css): the stylesheet (tokens, base, components, fonts)
+- [DESIGN.md](DESIGN.md): rationale and rules
+- [scripts/lint.mjs](scripts/lint.mjs): enforcement

@@ -1,0 +1,66 @@
+/* Base: reset, page, type roles, links, focus. Tokens come from tokens.css. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { background: var(--bg); }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: var(--text-body);
+  font-weight: 400;
+  font-style: normal;
+  font-synthesis: none;
+  line-height: 1.6;
+}
+
+h1, h2, h3, .display, .metric, .quote {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-style: normal;
+}
+
+.display { margin: 0; font-size: var(--text-display); line-height: 1.1; }
+h1 { margin: 0; font-size: var(--text-h1); line-height: 1.2; }
+h2 { margin: 0; font-size: var(--text-h2); line-height: 1.25; }
+h3 { margin: 0; font-size: var(--text-h3); line-height: 1.3; }
+
+p, figure { margin: 0; }
+
+a {
+  color: var(--accent);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.caption, figcaption {
+  margin-top: var(--space-8);
+  font-size: var(--text-caption);
+  line-height: 1.45;
+  color: var(--olive);
+}
+
+.lede, .prose { max-width: var(--layout-measure); }
+.lede { margin-top: var(--space-16); }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: var(--space-32) 0;
+}
+
+@media (max-width: 767px) {
+  .display { font-size: var(--text-display-mobile); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

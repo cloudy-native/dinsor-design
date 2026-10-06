@@ -1,0 +1,112 @@
+/* Linden: sample shop built on ../../dist/dinsor.css. Shop-only layout lives here; nothing in this file is part of the design system. */
+
+.quote { margin-top: var(--space-32); }
+.metric { margin-top: var(--space-24); }
+.plain { margin-top: var(--space-24); }
+.site-footer { padding-top: var(--space-96); }
+
+.price {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-style: normal;
+  font-size: var(--text-h3);
+  line-height: 1.3;
+  font-variant-numeric: tabular-nums;
+}
+
+.catalog {
+  display: grid;
+  gap: var(--space-32);
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+}
+
+.media-link { display: block; text-decoration: none; }
+
+.media {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-control);
+}
+
+.media-sand { background: var(--sand); }
+.media-tag { background: var(--tag); }
+.media-line { background: var(--line); }
+
+.product h2 { margin-top: var(--space-16); }
+.product .price { margin-top: auto; padding-top: var(--space-16); }
+
+.stage {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius-card);
+}
+
+.product-layout,
+.split {
+  display: grid;
+  gap: var(--space-32);
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: var(--space-8); margin-top: var(--space-16); }
+
+.buy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-16);
+  margin-top: var(--space-32);
+}
+
+.buy .field { width: 112px; }
+
+.stack .btn { justify-self: start; }
+
+.lines { display: grid; gap: var(--space-24); }
+
+.line {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-16);
+}
+
+.thumb {
+  width: 64px;
+  height: 64px;
+  flex: none;
+  object-fit: cover;
+  border-radius: var(--radius-control);
+}
+
+.line .text { min-width: 0; }
+.line .price { margin-left: auto; }
+
+.summary .btn { margin-top: var(--space-24); }
+
+.totals { list-style: none; margin: var(--space-16) 0 0; padding: 0; }
+
+.totals li {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-16);
+}
+
+.totals li + li { margin-top: var(--space-12); }
+
+.prose p + p,
+.prose .plain,
+.prose .quote { margin-top: var(--space-16); }
+.prose .quote { margin-top: var(--space-32); }
+
+@media (min-width: 768px) {
+  .catalog { grid-template-columns: 1fr 1fr; }
+  .product-layout,
+  .split { grid-template-columns: 1fr 1fr; align-items: start; }
+}
