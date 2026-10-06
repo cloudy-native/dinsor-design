@@ -40,3 +40,7 @@ Start at [AGENTS.md](AGENTS.md). Then copy markup from [components/](components/
 ## Change it
 
 Edit `tokens/tokens.json` or `src/*.css`, run `npm run build`, commit `dist/`. CI runs `npm run check`.
+
+## License
+
+[Unlicense](LICENSE): public domain. The font files in [fonts/](fonts/) keep their own SIL OFL 1.1 license.

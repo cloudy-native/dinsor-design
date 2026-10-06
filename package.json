@@ -2,6 +2,7 @@
   "name": "dinsor-design",
   "version": "0.2.0",
   "description": "Warm-paper design system: tokens, CSS, components, lint.",
+  "license": "Unlicense",
   "type": "module",
   "style": "dist/dinsor.css",
   "files": ["dist", "fonts", "components", "templates", "tokens", "scripts", "AGENTS.md", "DESIGN.md", "llms.txt", "skills"],
